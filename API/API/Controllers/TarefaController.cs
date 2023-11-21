@@ -30,6 +30,7 @@ public class TarefaController : ControllerBase
         }
     }
 
+
     // POST: api/tarefa/cadastrar
     [HttpPost]
     [Route("cadastrar")]
@@ -53,7 +54,6 @@ public class TarefaController : ControllerBase
             return BadRequest(e.Message);
         }
     }
-
     //patch: api/tarefas/alterar
     [Route("alterar")]
     [HttpPatch]
@@ -69,7 +69,7 @@ public class TarefaController : ControllerBase
             tarefa.Status = "Em andamento";
             tarefa.Categoria = categoria;
             _context.Tarefas.Add(tarefa);
-            _context.SaveChanges();
+            _context.Tarefas.Update(tarefa);
             return Created("", tarefa);
         }
         catch (Exception e)
