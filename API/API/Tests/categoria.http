@@ -1,0 +1,13 @@
+POST https://localhost:5001/api/categoria/cadastrar
+Content-Type: application/json
+
+{
+    "nome": "Compras"
+}
+
+###
+GET https://localhost:5001/api/categoria/listar
+
+### Listar Categorias ###
+
+### Criar Categoria ###
